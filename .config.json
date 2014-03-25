@@ -2,5 +2,5 @@
   "_comment": "This file will be merged with config.json but contains personal configs.",
   "_comment": "You can specify any configs with environment as well",
   "_ES_USERNAME": "*ES basic auth username. (remove first underscore)",
-  "_ES_PASSWORD": "*ES basic auth pw. (remove first underscore)",
+  "_ES_PASSWORD": "*ES basic auth pw. (remove first underscore)"
 }

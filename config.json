@@ -1,3 +1,4 @@
 {
+  "_insecure": "if set to true ssl problems will be ignored. use with caution.",
   "insecure": "true"
 }
