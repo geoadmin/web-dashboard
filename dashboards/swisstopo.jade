@@ -1,0 +1,16 @@
+extends layout
+
+block title
+  | Swisstopo Infrastructure Dashboard
+
+block content
+  div.gridster
+    ul
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='1')
+        div(data-id='welcome', data-view='Text', data-title='Hello', data-text='This is your shiny new dashboard.', data-moreinfo='Protip: You can drag the widgets around!')
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='tiles_per_second', data-view='Meter', data-title='Tiles pro Sekunde', data-min='0', data-max='100')
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
+        div(data-id='mapVisits', data-view='Graph', data-title='Seitenzugriffe auf map.geo.admin.ch innerhalb von 30 Minuten', style='background-color:#ff9618')
+    center
+      div(style='font-size: 12px') Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' -H "Content-Type: application/json" http://#{request.header('host')}/widgets/welcome
