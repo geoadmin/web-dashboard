@@ -9,7 +9,6 @@
     "elasticsearch": "~1.5",
     "moment": "*",
     "nconf": "*",
-    "underscore": "~1.6"
     "underscore": "~1.6",
     "daemonize2": "*",
     "mustache": "0.8.1"
