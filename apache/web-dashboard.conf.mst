@@ -1,0 +1,12 @@
+ProxyVia Off
+ProxyRequests On
+ProxyPass / http://localhost:{{ port }}/
+ProxyPassReverse / http://localhost:{{ port }}/
+ProxyPreserveHost On
+ProxyStatus Full
+ProxyReceiveBufferSize 0
+
+<Proxy *>
+  Order allow,deny
+  Allow from all
+</Proxy>
