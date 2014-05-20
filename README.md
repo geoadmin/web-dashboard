@@ -43,7 +43,7 @@ config.json example:
   "_heatmap_delay": "How old the tiles are that are shown in the heatmap in seconds. Realtime will most likely have too view tiles.",
   "heatmap_delay": 50,
   "_heatmap_tiles_limit": "The limit of how many tiles are queried and displayed on the map.",
-  "heatmap_tiles_limit": 200
+  "heatmap_tiles_limit": 200,
   "remote_host":"logs.bgdi.ch",
   "ssl": "true"
 }
