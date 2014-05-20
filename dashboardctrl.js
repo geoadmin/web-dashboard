@@ -1,7 +1,7 @@
 var daemon = require("daemonize2").setup({
     main: "server.js",
     name: "web-dashboard",
-    pidfile: "web-dashboard.pid",
+    pidfile: "../web-dashboard.pid",
     cwd: process.cwd()
 });
     
@@ -21,7 +21,11 @@ switch (process.argv[2]) {
     else
       console.log("The dashboard is not running.");
     break;
+
+  case "kill":
+    daemon.kill();
+    break;
       
   default:
-    console.log("Usage: [start|stop|status]");
+    console.log("Usage: [start|stop|status|kill]");
 }
