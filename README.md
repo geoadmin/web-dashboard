@@ -24,8 +24,8 @@ Using the nconf nodejs module 3 config files get loaded in descending priority:
 - **./config.json** - General configurations file.
 - **/var/www/.web-dashboard** - Server/deploy configuration. On deploy/int servers this file should be managed by puppet.
 
-```json
 .config.json example:
+```json
 {
   "_comment": "This file will be merged with config.json but contains personal configs.",
   "_comment": "You can specify any configs with environment as well",
