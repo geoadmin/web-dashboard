@@ -15,7 +15,11 @@ Use *sudo -u deploy deploy -r deploy/deploy.cfg [int|pord]* to deploy from the c
  - *npm start* is run
    - *scripts/prestart.js* runs. This compiles apache/web-dashboard.conf.mst and warns you if some critical configs are missing.
     - *node dashboardctrl.js start* runs. This starts the server as a daemon and writes the pid file to **/var/www/vhost/web-dashboard/private/web-dashboard.pid**.
-  - apache restarts
+ - apache restarts
+
+Compatibility Issues
+====================
+Due to compatibility issues with IE9 and IE10 we don't take dashing-js from the npm repo but from the geoadmin/dashing-js fork. This fork has applied the changes from https://github.com/fabiocaseri/dashing-js/pull/17/files. As soon as these changes or other compatibility measurements are made in the main repo you can switch the dependencies back.
 
 Config Files
 ============

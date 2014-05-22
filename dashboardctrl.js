@@ -25,7 +25,13 @@ switch (process.argv[2]) {
   case "kill":
     daemon.kill();
     break;
+
+  case "restart":
+    daemon.stop(function() { 
+      daemon.start();
+    });
+    break;
       
   default:
-    console.log("Usage: [start|stop|status|kill]");
+    console.log("Usage: [start|stop|status|restart|kill]");
 }

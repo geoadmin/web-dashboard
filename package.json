@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "dashing-js": "~0.1.5",
+    "dashing-js": "geoadmin/dashing-js",
     "elasticsearch": "~1.5",
     "moment": "*",
     "nconf": "*",

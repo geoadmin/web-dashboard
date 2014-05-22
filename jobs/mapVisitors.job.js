@@ -60,4 +60,4 @@ var sendEvent = function() {
 sendEvent();
 setInterval(function() {
   sendEvent();
-}, 30 * 1000);
+}, 60 * 1000);
