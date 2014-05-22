@@ -79,3 +79,7 @@ Nodejs App as a Daemon
 ======================
 We want to be able to start/stop the web-dashboard like the apache server with: "npm start" and "npm stop". Thus we use the daemonize module of node. It's used in ***dashboardctrl.js***. We change the package.json to use node dashboardctrl.js start/stop for a starting/stoping command.
 
+Major Deployment Issue
+======================
+
+It is important to notice that the DNS entries currently point *directly* onto the integration and production server and do not use the ELB+Varnish route, which would be preferable. This is due to the way the event update stream works, it is implemented by HTTP streaming (a event file is sent via HTTP which is chunked (transfer-encoding: chunked) and no EOF is sent. This does not seem to work with varnish, i suspect it to try to cache this event stream. If you manage to configure varnish to handle this stream for the dashboard correctly don't forget to change the **deploy/deploy.cfg** in order for it to deploy to both int and prod instances again.
