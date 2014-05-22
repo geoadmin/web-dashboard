@@ -18,6 +18,11 @@ class Dashing.Heatmap extends Dashing.Widget
       view: new ol.View2D({
         resolution: 650,
         center: [660000, 180000]
+      }),
+      interactions: ol.interaction.defaults({
+        doubleClickZoom: false,
+        dragPan: false,
+        mouseWheelZoom: false
       })
     })
  
