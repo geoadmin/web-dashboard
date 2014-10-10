@@ -1,0 +1,30 @@
+extends layout
+
+block title
+  | Swisstopo Infrastructure Dashboard
+
+block content
+  div.gridster
+    ul
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
+        div(data-id='Clock', data-view='Clock')
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
+        div(data-id='welcome', data-view='Text',
+        data-title='Welcome to the swiss geoportal dashboard.', data-moreinfo='You can drag the widgets around!')
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='2')
+        div(data-id='Heatmap', data-view='Heatmap')
+      li(data-row='1', data-col='1',data-sizex='4', data-sizey='1')
+        div(data-id='twitter_mentions',data-view='Comments',
+        data-moreinfo='#swisstopo',style='background-color:#4099ff')
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
+        div(data-id='tiles_per_second', data-view='Meter', data-title='Tiles per Second', data-min='0', data-max='500')
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='2')
+        div(data-id='mapVisits', data-view='Graph', data-title='People using map.geo.admin.ch within the last 30 minutes', style='background-color:#ff9618')
+     
+        
+block scripts
+  script.
+    $(function() {
+      Dashing.widget_base_dimensions = [180,165]
+      Dashing.numColumns = 10
+    });
