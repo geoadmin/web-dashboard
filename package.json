@@ -2,9 +2,11 @@
   "name": "swisstopo",
   "description": "swisstopo",
   "author": "Oskar Truffer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "*",
     "dashing-js": "~0.1.5",
     "elasticsearch": "~1.5",
     "moment": "*",
@@ -18,5 +20,5 @@
     "start": "node dashboardctrl.js start",
     "stop": "node dashboardctrl.js stop"
   },
-  "engine": "node >= 0.10"
+  "engine": "node >= 0.10",
 }
