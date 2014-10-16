@@ -1,3 +1,11 @@
+# Wrong files
+index.html
+Procfile
+apache/web-dashboard.conf
+
+# Build
+build/*
+
 # Logs
 logs
 *.log
