@@ -5,6 +5,6 @@ CODE_DIR=$2
 
 cd $CODE_DIR
 
-nm start
+make clean all
 
 exit $?

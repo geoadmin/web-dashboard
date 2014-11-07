@@ -14,5 +14,4 @@ dashing.protected = function(req, res, next) {
 // Set your default dashboard here
 //dashing.default_dashboard = 'mydashboard';
 
-process.env.port = config.get('port') || 3030;
 dashing.start();

@@ -1,7 +1,7 @@
 ProxyVia Off
 ProxyRequests On
-ProxyPass / http://localhost:{{ port }}/
-ProxyPassReverse / http://localhost:{{ port }}/
+ProxyPass {{ apache_path }}/  http://localhost:{{ port }}/
+ProxyPassReverse {{ apache_path }}/  http://localhost:{{ port }}/
 ProxyPreserveHost On
 ProxyStatus Full
 ProxyReceiveBufferSize 0
