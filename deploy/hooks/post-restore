@@ -5,6 +5,7 @@ CODE_DIR=$2
 
 cd $CODE_DIR
 
-make clean all
+npm install
+make stop clean all start
 
 exit $?
