@@ -1,7 +1,7 @@
 var daemon = require("daemonize2").setup({
     main: "server.js",
     name: "web-dashboard",
-    pidfile: "web-dashboard.pid",
+    pidfile: "../web-dashboard.pid",
     cwd: process.cwd()
 });
     

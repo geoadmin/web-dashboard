@@ -1,15 +1,14 @@
 {
-  "name": "swisstopo",
+  "name": "webdashboard_swisstopo",
   "description": "swisstopo",
-  "author": "Oskar Truffer",
-  "version": "0.0.1",
+  "author": "Swisstopo",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "dashing-js": "~0.1.5",
     "elasticsearch": "~1.5",
     "moment": "*",
     "nconf": "*",
-    "underscore": "~1.6"
     "underscore": "~1.6",
     "daemonize2": "*",
     "mustache": "0.8.1"
