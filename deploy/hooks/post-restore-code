@@ -5,6 +5,8 @@ CODE_DIR=$2
 
 cd $CODE_DIR
 
+source webrc_int
+
 npm install
 make stop clean all start
 
