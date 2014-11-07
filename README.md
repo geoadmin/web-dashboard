@@ -55,11 +55,6 @@ If you want to quickly rebuild and restart your project just use:
 For builds on test (webrc_dev), integration (webrc_int), 
 you should source the corresponding `webrc` file.
 
-On mf0t, create an Apache configuration file for your environment. Ex:
-
-    $ cat /var/www/vhosts/mf-geoadmin3/conf/00-elemoine.conf
-    Include /home/elemoine/mf-geoadmin3/apache/*.conf 
-
 ## Dependencies
 
 The GeoAdmin team development servers all contain the necessary dependencies
