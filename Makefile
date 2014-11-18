@@ -14,6 +14,7 @@ help:
 	@echo "- build          Build dashboard config"
 	@echo "- restart				Restart the dashboard"
 	@echo "- deploydev			Deploy the dashboard on dev"
+	@echo "- deployint			Deploy the dashboard on int"
 
 .PHONY: all
 all: package.json
@@ -51,3 +52,9 @@ deploydev:
 		else \
 			./scripts/deploydev.sh; \
 		fi 
+
+.PHONY: deployint
+deployint:
+	./scripts/deploysnapshot.sh $(SNAPSHOT) int
+
+
