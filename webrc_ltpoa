@@ -1,4 +1,4 @@
 export port=3031
 export PORT=3031
-export apache_path=ltpoa
-export JOB_PATH=
+export apache_path=
+
