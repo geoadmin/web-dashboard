@@ -1,4 +1,2 @@
 export port=3031
 export PORT=3031
-export apache_path=
-
