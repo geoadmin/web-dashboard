@@ -4,16 +4,16 @@ config = config.get();
 
 // checking if username and password are available otherwise throwing a warning!
 if (!config.get('ES_USERNAME')) {
-  console.log('[WARNING] There is no ES_USERNAME in the config.json' +
-              'or in the environment variables. This is used for the' +
-              'basic authentication on logs.bgdi.ch. The application' +
+  console.log('[WARNING] There is no ES_USERNAME in the config.json ' +
+              'or in the environment variables. This is used for the ' +
+              'basic authentication on logs.bgdi.ch. The application ' +
               'will probably not be able to provide any data.');
 }
 
 if (!config.get('ES_PASSWORD')) {
-  console.log('[WARNING] There is no ES_PASSWORD in the config.json' +
-              'or in the environment variables. This is used for the' +
-              'basic authentication on logs.bgdi.ch. The application' +
+  console.log('[WARNING] There is no ES_PASSWORD in the config.json ' +
+              'or in the environment variables. This is used for the ' +
+              'basic authentication on logs.bgdi.ch. The application ' +
               'will probably not be able to provide any data.');
 }
 

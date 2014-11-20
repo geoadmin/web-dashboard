@@ -1,3 +1,2 @@
 export port=3030
 export PORT=3030
-export APACHE_PATH=
