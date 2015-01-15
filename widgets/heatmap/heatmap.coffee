@@ -15,7 +15,7 @@ class Dashing.Heatmap extends Dashing.Widget
     @map = new ga.Map({
       target: 'map-canvas',
       layers: [@layer, @heatmap],
-      view: new ol.View2D({
+      view: new ol.View({
         resolution: 650,
         center: [660000, 180000]
       })
