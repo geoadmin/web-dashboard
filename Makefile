@@ -11,7 +11,6 @@ help:
 	@echo "- start          Start the daemon"
 	@echo "- stop           Stop the daemon"
 	@echo "- status         Daemon status"
-	@echo "- build          Build dashboard config"
 	@echo "- restart				Restart the dashboard"
 	@echo "- deploydev			Deploy the dashboard on dev"
 	@echo "- deployint			Deploy the dashboard on int"
@@ -38,12 +37,8 @@ stop:
 status:
 	node src/dashboardctrl.js status
 
-.PHONY: build
-build:
-	node src/prestart.js
-
 .PHONY: restart
-restart: stop build start
+restart: stop clean all start
 
 .PHONY: deploydev
 deploydev: 
