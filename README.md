@@ -1,7 +1,7 @@
 Web-dashboard
 =========
 
-Next generation web-dashboard
+Next generation web-dashboard. See the actual state on http://web-dashboard.int.bgdi.ch/api_web_dash
 
 This Project uses dashing-js which is a nodejs port of the Dashing Ruby library
 
