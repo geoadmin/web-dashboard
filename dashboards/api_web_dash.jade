@@ -9,23 +9,29 @@ block content
       li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
         div(data-id='Clock', data-view='Clock')
       li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
-        div(data-id='welcome', data-view='Text',
-        data-title='Welcome to the swiss geoportal dashboard.', data-moreinfo='You can drag the widgets around!')
+        div(data-id='welcome', data-view='Text', data-title='Welcome to the swiss geoportal dashboard.', data-moreinfo='You can drag the widgets around!')
       li(data-row='1', data-col='1', data-sizex='4', data-sizey='2')
         div(data-id='Heatmap', data-view='Heatmap')
       li(data-row='1', data-col='1',data-sizex='4', data-sizey='1')
-        div(data-id='twitter_mentions',data-view='Comments',
-        data-moreinfo='#swisstopo',style='background-color:#4099ff')
+        div(data-id='twitter_mentions',data-view='Comments', data-moreinfo='@swiss_geoportal / #swisstopo',style='background-color:#4099ff')
       li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
         div(data-id='tiles_per_second', data-view='Meter', data-title='Tiles per Second', data-min='0', data-max='500')
       li(data-row='1', data-col='1', data-sizex='4', data-sizey='2')
         div(data-id='mapVisits', data-view='Graph', data-title='People using map.geo.admin.ch within the last 30 minutes', style='background-color:#ff9618')
       li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
         div(data-id='queries_per_minute', data-view='Meter', data-title='Queries per Minute', data-min='0',data-max='1000')
-              
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='4')
+        div(data-id='mostwanted', data-view='List', data-unordered='true', data-title='Most Wanted', data-moreinfo='# of times queried Layers')
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
+        div(data-view='Text', style='background-color:#8E8E90;', data-title='System Responses')
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='2')
+        div(data-view='Text', style='background-color:#8E8E90;', data-title='Failure rate API 3')
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
+        div(data-view='Text', style='background-color:#8E8E90;', data-title='Last searched terms')
+
 block scripts
   script.
     $(function() {
-      Dashing.widget_base_dimensions = [180,165]
+      Dashing.widget_base_dimensions = [180,180]
       Dashing.numColumns = 10
     });

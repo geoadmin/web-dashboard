@@ -10,6 +10,9 @@ build/*
 logs
 *.log
 
+# vim swap files
+*.swp
+
 # private configs.
 .config.json
 
