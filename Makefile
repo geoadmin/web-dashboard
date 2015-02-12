@@ -38,7 +38,10 @@ status:
 	node src/dashboardctrl.js status
 
 .PHONY: restart
-restart: stop clean all start
+restart: stop start
+
+.PHONY: reboot
+reboot: stop clean all start
 
 .PHONY: deploydev
 deploydev: 

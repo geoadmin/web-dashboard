@@ -10,8 +10,9 @@ class Dashing.Heatmap extends Dashing.Widget
       source: @vectorSource
     })
     @heatmap.getSource().on('addfeature', (event) ->
-      event.feature.set('weight', 0.6)
+      event.feature.set('weight', 1)
     )
+    @controls = ol.control.defaults({zoom: false})
     @map = new ga.Map({
       target: 'map-canvas'
       layers: [@layer, @heatmap]
@@ -20,9 +21,7 @@ class Dashing.Heatmap extends Dashing.Widget
         center: [660000, 180000]
       )
       interactions: []
-      controls: [
-        new ol.control.Attribution()
-        ]
+      controls: @controls
     })
   onData: (data) ->
     # console.log data
@@ -30,11 +29,11 @@ class Dashing.Heatmap extends Dashing.Widget
       @previousData = [];
       @round = 0;
     @round++
-    if (@previousData[@round - 50] instanceof Array)
-      # console.log "deleting old data from round: "+ (@round - 50)
-      for i in @previousData[@round - 50]
+    if (@previousData[@round - 100] instanceof Array)
+      # console.log "deleting old data from round: "+ (@round - 100)
+      for i in @previousData[@round - 100]
         @vectorSource.removeFeature i
-      delete @previousData[@round - 50]
+      delete @previousData[@round - 100]
     @previousData[@round] = []
     for hit in data.hits
       point = new ol.geom.Point([hit._source["wmts.input_x"], hit._source["wmts.input_y"]])
