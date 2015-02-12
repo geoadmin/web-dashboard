@@ -1,6 +1,6 @@
 class Dashing.Heatmap extends Dashing.Widget
 
-  @doneThat = 0;
+  @doneThat = 0
 
   ready: ->
     @layer = ga.layer.create 'ch.swisstopo.pixelkarte-grau' 
@@ -10,7 +10,8 @@ class Dashing.Heatmap extends Dashing.Widget
       source: @vectorSource
     })
     @heatmap.getSource().on('addfeature', (event) ->
-      event.feature.set('weight', 1)
+      if typeof(event.feature) != "undefined"
+        event.feature.set('weight', 1)
     )
     @controls = ol.control.defaults({zoom: false})
     @map = new ga.Map({
@@ -26,8 +27,8 @@ class Dashing.Heatmap extends Dashing.Widget
   onData: (data) ->
     # console.log data
     if typeof(@previousData) == 'undefined'
-      @previousData = [];
-      @round = 0;
+      @previousData = []
+      @round = 0
     @round++
     if (@previousData[@round - 100] instanceof Array)
       # console.log "deleting old data from round: "+ (@round - 100)
@@ -39,4 +40,5 @@ class Dashing.Heatmap extends Dashing.Widget
       point = new ol.geom.Point([hit._source["wmts.input_x"], hit._source["wmts.input_y"]])
       feature = new ol.Feature(point)
       @previousData[@round].push(feature)
-    @vectorSource.addFeatures @previousData[@round]
+    if typeof(feature) != "undefined"
+      @vectorSource.addFeatures @previousData[@round]
