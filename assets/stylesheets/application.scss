@@ -7,6 +7,8 @@
 // ----------------------------------------------------------------------------
 $background-color: #222;
 $text-color: #fff;
+$widget-vertical-align: middle;
+$widget-padding: 20px 10px;
 
 $background-warning-color-1: #e82711;
 $background-warning-color-2: #9b2d23;
@@ -143,11 +145,11 @@ h3 {
 }
 
 .widget {
-  padding: 25px 12px;
+  padding: $widget-padding;
   text-align: center;
   width: 100%;
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: $widget-vertical-align;
 }
 
 .widget.status-warning {

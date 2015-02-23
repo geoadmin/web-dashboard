@@ -1,11 +1,11 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #dc5945;
+$background-color:  #ff941a;
 
-$title-color:       rgba(255, 255, 255, 0.7);
+$title-color:       rgba(255, 255, 255, 1);
 $moreinfo-color:    rgba(255, 255, 255, 0.3);
-$tick-color:        rgba(0, 0, 0, 0.4);
+$tick-color:        rgba(0, 0, 0, 1);
 
 
 // ----------------------------------------------------------------------------
@@ -16,13 +16,12 @@ $tick-color:        rgba(0, 0, 0, 0.4);
   background-color: $background-color;
   position: relative;
 
-
   svg {
     position: absolute;
-    opacity: 0.4;
-    fill-opacity: 0.4;
+    opacity: 0.6;
+    fill-opacity: 0.6;
     left: 0px;
-    top: 0px;
+    top: 10px;
   }
 
   .title, .value {
@@ -33,7 +32,7 @@ $tick-color:        rgba(0, 0, 0, 0.4);
   .title {
     color: $title-color;
   }
-
+ 
   .more-info {
     color: $moreinfo-color;
     font-weight: 600;
@@ -47,7 +46,7 @@ $tick-color:        rgba(0, 0, 0, 0.4);
     .title {
       font-size: 20px;
       color: $tick-color;
-      opacity: 0.5;
+      opacity: 1;
       padding-bottom: 3px;
     }
   }

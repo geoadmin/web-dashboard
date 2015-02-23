@@ -18,7 +18,7 @@ class Dashing.Heatmap extends Dashing.Widget
       target: 'map-canvas'
       layers: [@layer, @heatmap]
       view: new ol.View(
-        resolution: 650
+        resolution: 500
         center: [660000, 180000]
       )
       interactions: []
