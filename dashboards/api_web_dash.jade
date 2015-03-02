@@ -8,20 +8,38 @@ block content
     ul
       li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
         div(data-id='Clock', data-view='Clock')
-      li(data-row='1', data-col='1', data-sizex='4', data-sizey='2')
-        div(data-id='Heatmap', data-view='Heatmap')
+
       li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
         div(data-id='welcome', data-view='Text',
-        data-title='Welcome to the swiss geoportal dashboard.', data-moreinfo='You can drag the widgets around!')
-      li(data-row='1', data-col='1',data-sizex='4', data-sizey='1')
-        div(data-id='twitter_mentions',data-view='Comments',
-        data-moreinfo='#swisstopo',style='background-color:#4099ff')
+          data-title='Welcome to the swiss geoportal dashboard.',
+          data-moreinfo='You can drag the widgets around!')
+
       li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
-        div(data-id='tiles_per_second', data-view='Meter', data-title='Tiles per Second', data-min='0', data-max='500')
+        div(data-id='tiles_per_second', data-view='Meter',
+          data-title='Tiles per Second', data-min='0', data-max='500')
+
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
+        div(data-id='queries_per_minute', data-view='Meter',
+          data-title='Queries per Minute', data-min='0',data-max='500')
+
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='3')
+        div(data-id='Heatmap', data-view='Heatmap')
+
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='4')
+        div(data-id='Twitter', data-view='Twitter',
+          data-title='@swiss_geoportal')
+
       li(data-row='1', data-col='1', data-sizex='4', data-sizey='2')
-        div(data-id='mapVisits', data-view='Graph', data-title='People using map.geo.admin.ch within the last 30 minutes', style='background-color:#ff9618')
-      li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
-        div(data-id='queries_per_minute', data-view='Meter', data-title='Queries per Minute', data-min='0',data-max='1000')
+
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='2')
+        div(data-id='mapVisits', data-view='Graph',
+          data-title='People using map.geo.admin.ch within the last 30 minutes')
+
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
+
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
+        div(data-id='welcome', data-view='Text',
+          data-title='The KOGIS team wishes you a pleasant visit at Swisstopo')
               
 block scripts
   script.
