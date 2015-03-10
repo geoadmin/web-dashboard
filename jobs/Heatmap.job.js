@@ -4,4 +4,4 @@ setInterval(function() {
   es.tilesNSecondsAgo(function(body) {
     send_event('Heatmap', {hits: body.hits});
   }, 1);
-}, 100);
+}, 2*1000);

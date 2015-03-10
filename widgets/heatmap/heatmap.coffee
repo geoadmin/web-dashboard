@@ -30,11 +30,11 @@ class Dashing.Heatmap extends Dashing.Widget
       @previousData = []
       @round = 0
     @round++
-    if (@previousData[@round - 100] instanceof Array)
-      # console.log "deleting old data from round: "+ (@round - 100)
-      for i in @previousData[@round - 100]
+    if (@previousData[@round - 30] instanceof Array)
+      # console.log "deleting old data from round: "+ (@round - 30)
+      for i in @previousData[@round - 30]
         @vectorSource.removeFeature i
-      delete @previousData[@round - 100]
+      delete @previousData[@round - 30]
     @previousData[@round] = []
     for hit in data.hits
       point = new ol.geom.Point([hit._source["wmts.input_x"], hit._source["wmts.input_y"]])
