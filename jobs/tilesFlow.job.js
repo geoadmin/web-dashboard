@@ -23,7 +23,7 @@ var parseData = function(data, last_count) {
     m = moment(entry.time);
     graph.push({
       // the time value is given in seconds. we subtract 30
-      // minutes in order for the x achis to look synced.
+      // minutes in order for the x axis to look synchronized.
       x: (entry.time - midnight.valueOf()) / 1000 + 30 * 60,
       y: entry.count
     });
@@ -43,15 +43,16 @@ var sendEvent = function() {
   var finished = function() {
     if (graphData !== false && lastData !== false) {
       var points = parseData(graphData, Math.round(lastData));
-      send_event('mapVisits', {points: points});
+      send_event('tilesFlow', {points: points});
     }
   };
-  ESRequest.getMapVisitsHistogram(function(data) {
+
+  ESRequest.getTilesFlowHistogram(function(data) {
     graphData = data;
     finished();
   });
 
-  ESRequest.visitsPerHour(function(data) {
+  ESRequest.tilesPerHour(function(data) {
     lastData = data;
     finished();
   });
