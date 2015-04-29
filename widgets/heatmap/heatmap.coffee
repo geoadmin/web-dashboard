@@ -6,8 +6,9 @@ class Dashing.Heatmap extends Dashing.Widget
     @layer = ga.layer.create 'ch.swisstopo.pixelkarte-grau' 
     @vectorSource = new ol.source.Vector()
     @heatmap = new ol.layer.Heatmap({
-      radius: 5,
-      source: @vectorSource
+      radius: 3,
+      source: @vectorSource,
+      # gradient: ['#FF0000', '#FF0000', '#FF0000', '#FF0000', '#FF0000']
     })
     @heatmap.getSource().on('addfeature', (event) ->
       if typeof(event.feature) != "undefined"
@@ -23,6 +24,7 @@ class Dashing.Heatmap extends Dashing.Widget
       )
       interactions: []
       controls: @controls
+      renderer: 'canvas'
     })
   onData: (data) ->
     # console.log data
@@ -40,5 +42,7 @@ class Dashing.Heatmap extends Dashing.Widget
       point = new ol.geom.Point([hit._source["wmts.input_x"], hit._source["wmts.input_y"]])
       feature = new ol.Feature(point)
       @previousData[@round].push(feature)
+      # console.log "added a new point to the map"
     if typeof(feature) != "undefined"
       @vectorSource.addFeatures @previousData[@round]
+      # console.log "feature was not defined"

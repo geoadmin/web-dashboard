@@ -18,6 +18,9 @@ $background-danger-color-1: #eeae32;
 $background-danger-color-2: #ff9618;
 $text-danger-color: #fff;
 
+$h1-font-size: 26px;
+$h2-font-size: 30px;
+
 @-webkit-keyframes status-warning-background {
   0%   { background-color: $background-warning-color-1; }
   50%  { background-color: $background-warning-color-2; }
@@ -96,12 +99,12 @@ h1, h2, h3, h4, h5, p {
 h1 { 
   margin-bottom: 12px;
   text-align: center;
-  font-size: 30px;
+  font-size: $h1-font-size;
   font-weight: 400;
 }
 h2 {
   text-transform: uppercase;
-  font-size: 76px;
+  font-size: $h2-font-size;
   font-weight: 700;
   color: $text-color;
 }
