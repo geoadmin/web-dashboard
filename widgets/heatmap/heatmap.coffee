@@ -27,7 +27,7 @@ class Dashing.Heatmap extends Dashing.Widget
       renderer: 'canvas'
     })
   onData: (data) ->
-    # console.log data
+    console.log data
     if typeof(@previousData) == 'undefined'
       @previousData = []
       @round = 0

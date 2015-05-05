@@ -8,8 +8,16 @@ var sendEvent = function() {
     if (hits > max_tacho) {
       max_tacho = hits;
     }
-    send_event('wmts_top_layers', {value: hits, max: max_tacho});
+    var data = [];
+    var hit = {}; 
+    hit.value = hits;
+    hit.label = 'National Map';
+    hit.max = max_tacho;
+    data.push(hit);
+
+    send_event('wmts_top_layers', { items: data });
   });
 };
 
-setInterval(function() {sendEvent();}, 10 * 60 * 1000);
+// Send this event every 5 minutes
+setInterval(function() {sendEvent();}, 5000);

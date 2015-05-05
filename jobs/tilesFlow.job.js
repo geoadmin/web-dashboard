@@ -59,6 +59,8 @@ var sendEvent = function() {
 };
 
 sendEvent();
+
+//Send this event every 5 minutes
 setInterval(function() {
   sendEvent();
-}, 30 * 1000);
+}, 300000);

@@ -12,4 +12,5 @@ var sendEvent = function() {
   });
 };
 
-setInterval(function() {sendEvent();}, 2 * 1000);
+// Send this event every second
+setInterval(function() {sendEvent();}, 1000);

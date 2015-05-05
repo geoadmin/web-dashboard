@@ -1,6 +1,5 @@
 var ESRequest = require('../lib/ElasticSearchRequests.js');
 var moment = require('moment');
-var tenMinutes = 10 * 60 * 1000;
 
 // if we are at e.g. 17:40 the last bar will only contain
 // the amount of clicks from 17:30-17:40, thus being in
@@ -58,6 +57,8 @@ var sendEvent = function() {
 };
 
 sendEvent();
+
+// Send this event every 5 minutes
 setInterval(function() {
   sendEvent();
-}, 30 * 1000);
+}, 300000);
