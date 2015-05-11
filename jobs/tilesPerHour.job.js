@@ -3,7 +3,7 @@ var max_tacho = 1000;
 
 var sendEvent = function() {
   ESRequest.tilesPerHour(function(count) {
-    var hits = Math.floor(count / 3600);
+    var hits = Math.floor(count);
     if (hits > max_tacho) {
       max_tacho = hits;
     }
@@ -11,4 +11,5 @@ var sendEvent = function() {
   });
 };
 
-setInterval(function() {sendEvent();}, 10 * 60 * 1000);
+//send this event every 5 minutes
+setInterval(function() {sendEvent();}, 300000);

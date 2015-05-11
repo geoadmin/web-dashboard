@@ -8,9 +8,9 @@ var sendEvent = function() {
     if (hits > max_tacho) {
       max_tacho = hits;
     }
-    console.log('eventino')
     send_event('tiles_per_second', {value: hits, max: max_tacho});
   });
 };
 
-setInterval(function() {sendEvent();}, 2 * 1000);
+// send this event every 1 second
+setInterval(function() {sendEvent();}, 1000);

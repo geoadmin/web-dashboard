@@ -1,5 +1,6 @@
 var ESRequest = require('../lib/ElasticSearchRequests.js');
-var max_tacho = 500;
+//This defines the initial maximal value
+var max_tacho = 50000;
 
 
 var sendEvent = function() {
@@ -12,4 +13,7 @@ var sendEvent = function() {
   });
 };
 
-setInterval(function() {sendEvent();}, 2 * 1000);
+// send this event every second
+setInterval(function() {
+  sendEvent();
+}, 1000);

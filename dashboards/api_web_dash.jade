@@ -14,6 +14,16 @@ block content
           data-title='Welcome to the swiss geoportal dashboard.',
           data-moreinfo='You can drag the widgets around!')
 
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
+        div(data-id='tilesFlow', data-view='Graph',
+          data-title='Tiles downloaded during the last hour')
+
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='5')
+        div(data-id='Twitter', data-view='Twitter')
+
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='3')
+        div(data-id='Heatmap', data-view='Heatmap')
+
       li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
         div(data-id='tiles_per_minute', data-view='Meter',
           data-title='Tiles per Minute', data-min='0', data-max='50000')
@@ -22,33 +32,21 @@ block content
         div(data-id='queries_per_minute', data-view='Meter',
           data-title='Queries per Minute', data-min='0',data-max='500')
 
-      li(data-row='1', data-col='1', data-sizex='2', data-sizey='5')
-        div(data-id='Twitter', data-view='Twitter',
-          data-title='@swiss_geoportal')
-
       li(data-row='1', data-col='1', data-sizex='4', data-sizey='3')
-        div(data-id='Heatmap', data-view='Heatmap')
-
-      li(data-row='1', data-col='1', data-sizex='2', data-sizey='3')
-        div(data-id='topwmtslayers', data-view='Mostwanted',
-          data-title='Top Layers', data-unordered='true')
-
-      li(data-row='1', data-col='1', data-sizex='2', data-sizey='3')
-      //  div(data-id='wmts_top_layers', data-view='Meter',
-      //    data-title='WMTS TOP Layers', data-min='0',data-max='500')
+        div(data-id='wmts_top_layers', data-view='List',
+        data-title='TOP Layers')
       // div(data-id='topwmslayers', data-view='List', data-title='Top WMTS Layers')
+
+      //li(data-row='1', data-col='1', data-sizex='2', data-sizey='3')
 
       li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
         div(data-id='mapVisits', data-view='Graph',
           data-title='Unique visitors using map.geo.admin.ch during last hour')
 
       li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
-        div(data-id='tilesFlow', data-view='Graph',
-            data-title='Tiles downloaded during the last hour')
-
-      li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
         div(data-id='welcome', data-view='Text',
-          data-title='The COGIS team wishes you a pleasant visit at Swisstopo')
+          data-title='The COGIS team wishes you a pleasant visit at Swisstopo',
+          data-moreinfo='Write us on twitter @swiss_geoportal!')
 
 block scripts
   script.
