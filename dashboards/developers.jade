@@ -1,0 +1,31 @@
+extends layout
+
+block title
+  | Swisstopo Infrastructure Dashboard
+
+block content
+  div.gridster
+    ul
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
+        div(data-id='welcome', data-view='Text',
+          data-title='Welcome Developers.',
+          data-moreinfo='You can drag the widgets around!')
+
+      li(data-row='1', data-col='1', data-sizex='4', data-sizey='1')
+        div(data-id='tilesFlow', data-view='Graph',
+          data-title='Tiles downloaded during the last hour')
+
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
+        div(data-id='tiles_per_minute', data-view='Meter',
+          data-title='Tiles per Minute', data-min='0', data-max='50000')
+
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='2')
+        div(data-id='print_queries_per_minute', data-view='Meter',
+          data-title='Print Queries per Minute', data-min='0',data-max='500')
+
+block scripts
+  script.
+    $(function() {
+      Dashing.widget_base_dimensions = [180,165]
+      Dashing.numColumns = 10
+    });
