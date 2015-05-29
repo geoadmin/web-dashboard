@@ -1,7 +1,12 @@
 .widget-heatmap {
   height: 520px;
   padding: 0px !important;
-
+  background-color: #FFFFFF;
+  
+  h1 {
+    color: black;
+  }
+ 
   .map-canvas {
   height: 520px;
   }
