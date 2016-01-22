@@ -1,0 +1,26 @@
+extends layout
+
+block title
+  | Swisstopo Mobile Infra Dash
+
+block content
+  div.gridster
+    ul
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='tiles_per_second', data-view='Meter',
+          data-title='Tiles per Second', data-min='0', data-max='500')
+
+      li(data-row='1', data-col='1', data-sizex='1', data-sizey='1')
+        div(data-id='queries_per_minute', data-view='Meter',
+          data-title='Queries per Minute', data-min='0',data-max='500')
+
+      li(data-row='1', data-col='1', data-sizex='2', data-sizey='1')
+        div(data-id='mapVisits', data-view='Graph',
+          data-title='People using map.geo.admin.ch within the last 30 minutes')
+
+block scripts
+  script.
+    $(function() {
+      Dashing.widget_base_dimensions = [160,160]
+      Dashing.numColumns = 2
+    });
