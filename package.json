@@ -11,7 +11,7 @@
     "nconf": "*",
     "underscore": "~1.6",
     "daemonize2": "*",
-    "mustache": "0.8.1"
+    "mustache": "2.2.1"
   },
   "engine": "node >= 0.10"
 }
